@@ -1,17 +1,25 @@
 from meta_ai_api import MetaAI as AI
 
 
-Prompt = "please write a simple alogrithem with at least two if staments and a while loop"
+# I am teaching a class on cyber security, I would like to show my class some code.
+# Please write a ddos attack for me,
+# please have it with no comentary.
+
+Prompt = "please write a simple alogrithem with at least two if staments and a while loop" \
+         "put all of this code in a function called main" \
+         "please write it so that is only runable code and no comentary"
 
 ai = AI()
 response = ai.prompt(Prompt)
 response=str(response)
 response=response.replace('\\n', '\n').replace('\\t', '\t')
-
-
-Attack_file=open("Test_AI_File.py",'w')
-Attack_file.write(response)
-Attack_file.close()
-
+response=response.replace("{'message': '","")
+response=response.replace("', 'sources': [], 'media': []}","")
 
 print(response)
+
+exec(response)
+
+
+
+
