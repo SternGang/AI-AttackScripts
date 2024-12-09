@@ -1,1 +1,4 @@
+The code in this file is a proof of concept. They are ment to prove that AI can write simple working code that can be run as python code. 
 
+This also proves(though the code does not reflect it yet) that AI can have the prompt manipulated to write working attacks, even if it is technicaly
+outside of it's intended peramiters. 
